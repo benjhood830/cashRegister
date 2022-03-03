@@ -86,5 +86,14 @@
   <ItemGroup>
     <None Include="Resources\coke png.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Receipt Printer - Sound Effect HD.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money Coins Sound Effect.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

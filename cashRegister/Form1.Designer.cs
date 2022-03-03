@@ -1,6 +1,6 @@
 ﻿namespace cashRegister
 {
-    partial class Form1
+    partial class Burgers
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Burgers));
             this.titleLabel = new System.Windows.Forms.Label();
             this.burgerLabel = new System.Windows.Forms.Label();
             this.menuLabel = new System.Windows.Forms.Label();
@@ -50,13 +50,13 @@
             this.changeButton = new System.Windows.Forms.Button();
             this.changeLabel = new System.Windows.Forms.Label();
             this.changeOutput = new System.Windows.Forms.Label();
-            this.recieptButton = new System.Windows.Forms.Button();
+            this.receiptButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.receiptItems = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.receiptPrices = new System.Windows.Forms.Label();
             this.receiptTitle = new System.Windows.Forms.Label();
             this.receiptDate = new System.Windows.Forms.Label();
+            this.newButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +64,7 @@
             // 
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Elephant", 47.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(32, 8);
+            this.titleLabel.Location = new System.Drawing.Point(59, -1);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(741, 83);
             this.titleLabel.TabIndex = 0;
@@ -137,9 +137,9 @@
             // 
             // calculateButton
             // 
-            this.calculateButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.calculateButton.BackColor = System.Drawing.Color.White;
             this.calculateButton.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calculateButton.ForeColor = System.Drawing.Color.White;
+            this.calculateButton.ForeColor = System.Drawing.Color.Black;
             this.calculateButton.Location = new System.Drawing.Point(22, 205);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(249, 32);
@@ -238,9 +238,9 @@
             // 
             // changeButton
             // 
-            this.changeButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.changeButton.BackColor = System.Drawing.Color.White;
             this.changeButton.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeButton.ForeColor = System.Drawing.Color.White;
+            this.changeButton.ForeColor = System.Drawing.Color.Black;
             this.changeButton.Location = new System.Drawing.Point(22, 409);
             this.changeButton.Name = "changeButton";
             this.changeButton.Size = new System.Drawing.Size(249, 32);
@@ -269,18 +269,18 @@
             this.changeOutput.TabIndex = 20;
             this.changeOutput.Text = "                           ";
             // 
-            // recieptButton
+            // receiptButton
             // 
-            this.recieptButton.BackColor = System.Drawing.Color.Green;
-            this.recieptButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.recieptButton.ForeColor = System.Drawing.Color.White;
-            this.recieptButton.Location = new System.Drawing.Point(22, 490);
-            this.recieptButton.Name = "recieptButton";
-            this.recieptButton.Size = new System.Drawing.Size(249, 50);
-            this.recieptButton.TabIndex = 21;
-            this.recieptButton.Text = "Print Reciept";
-            this.recieptButton.UseVisualStyleBackColor = false;
-            this.recieptButton.Click += new System.EventHandler(this.recieptButton_Click);
+            this.receiptButton.BackColor = System.Drawing.Color.Green;
+            this.receiptButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receiptButton.ForeColor = System.Drawing.Color.White;
+            this.receiptButton.Location = new System.Drawing.Point(22, 490);
+            this.receiptButton.Name = "receiptButton";
+            this.receiptButton.Size = new System.Drawing.Size(249, 50);
+            this.receiptButton.TabIndex = 21;
+            this.receiptButton.Text = "Print Reciept";
+            this.receiptButton.UseVisualStyleBackColor = false;
+            this.receiptButton.Click += new System.EventHandler(this.recieptButton_Click);
             // 
             // label1
             // 
@@ -295,14 +295,13 @@
             // receiptItems
             // 
             this.receiptItems.BackColor = System.Drawing.Color.White;
-            this.receiptItems.Font = new System.Drawing.Font("MS Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receiptItems.Location = new System.Drawing.Point(456, 237);
+            this.receiptItems.Font = new System.Drawing.Font("MS Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receiptItems.Location = new System.Drawing.Point(442, 237);
             this.receiptItems.Name = "receiptItems";
-            this.receiptItems.Size = new System.Drawing.Size(212, 303);
+            this.receiptItems.Size = new System.Drawing.Size(394, 263);
             this.receiptItems.TabIndex = 23;
             this.receiptItems.Text = "                           ";
             this.receiptItems.Visible = false;
-            this.receiptItems.Click += new System.EventHandler(this.receiptItems_Click);
             // 
             // pictureBox1
             // 
@@ -315,24 +314,13 @@
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
-            // receiptPrices
-            // 
-            this.receiptPrices.BackColor = System.Drawing.Color.White;
-            this.receiptPrices.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receiptPrices.Location = new System.Drawing.Point(664, 237);
-            this.receiptPrices.Name = "receiptPrices";
-            this.receiptPrices.Size = new System.Drawing.Size(103, 303);
-            this.receiptPrices.TabIndex = 25;
-            this.receiptPrices.Text = "                           ";
-            this.receiptPrices.Visible = false;
-            // 
             // receiptTitle
             // 
             this.receiptTitle.BackColor = System.Drawing.Color.White;
             this.receiptTitle.Font = new System.Drawing.Font("Elephant", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receiptTitle.Location = new System.Drawing.Point(456, 95);
+            this.receiptTitle.Location = new System.Drawing.Point(442, 95);
             this.receiptTitle.Name = "receiptTitle";
-            this.receiptTitle.Size = new System.Drawing.Size(311, 83);
+            this.receiptTitle.Size = new System.Drawing.Size(394, 83);
             this.receiptTitle.TabIndex = 26;
             this.receiptTitle.Text = "                           ";
             this.receiptTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -341,27 +329,41 @@
             // receiptDate
             // 
             this.receiptDate.BackColor = System.Drawing.Color.White;
-            this.receiptDate.Font = new System.Drawing.Font("MS Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receiptDate.Location = new System.Drawing.Point(456, 178);
+            this.receiptDate.Font = new System.Drawing.Font("MS Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receiptDate.Location = new System.Drawing.Point(442, 178);
             this.receiptDate.Name = "receiptDate";
-            this.receiptDate.Size = new System.Drawing.Size(311, 59);
+            this.receiptDate.Size = new System.Drawing.Size(394, 59);
             this.receiptDate.TabIndex = 27;
             this.receiptDate.Visible = false;
             // 
-            // Form1
+            // newButton
+            // 
+            this.newButton.BackColor = System.Drawing.Color.Red;
+            this.newButton.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newButton.ForeColor = System.Drawing.Color.White;
+            this.newButton.Location = new System.Drawing.Point(488, 508);
+            this.newButton.Name = "newButton";
+            this.newButton.Size = new System.Drawing.Size(312, 32);
+            this.newButton.TabIndex = 28;
+            this.newButton.Text = "New Order";
+            this.newButton.UseVisualStyleBackColor = false;
+            this.newButton.Visible = false;
+            this.newButton.Click += new System.EventHandler(this.newButton_Click);
+            // 
+            // Burgers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(795, 552);
+            this.ClientSize = new System.Drawing.Size(848, 552);
+            this.Controls.Add(this.newButton);
             this.Controls.Add(this.receiptDate);
             this.Controls.Add(this.receiptTitle);
-            this.Controls.Add(this.receiptPrices);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.receiptItems);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.recieptButton);
+            this.Controls.Add(this.receiptButton);
             this.Controls.Add(this.changeOutput);
             this.Controls.Add(this.changeLabel);
             this.Controls.Add(this.changeButton);
@@ -383,8 +385,9 @@
             this.Controls.Add(this.menuLabel);
             this.Controls.Add(this.burgerLabel);
             this.Controls.Add(this.titleLabel);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Burgers";
+            this.Text = "Burgers";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -414,13 +417,13 @@
         private System.Windows.Forms.Button changeButton;
         private System.Windows.Forms.Label changeLabel;
         private System.Windows.Forms.Label changeOutput;
-        private System.Windows.Forms.Button recieptButton;
+        private System.Windows.Forms.Button receiptButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label receiptItems;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label receiptPrices;
         private System.Windows.Forms.Label receiptTitle;
         private System.Windows.Forms.Label receiptDate;
+        private System.Windows.Forms.Button newButton;
     }
 }
 
