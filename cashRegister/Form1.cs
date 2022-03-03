@@ -51,7 +51,7 @@ namespace cashRegister
             InitializeComponent();
         }
 
-      
+
         private void calculateButton_Click(object sender, EventArgs e)
         {
             try
@@ -158,11 +158,11 @@ namespace cashRegister
 
             }
         }
-            
 
-        
-               
-    private void recieptButton_Click(object sender, EventArgs e)
+
+
+
+        private void recieptButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -201,7 +201,7 @@ namespace cashRegister
                 Refresh();
                 Thread.Sleep(500);
                 receiptItems.Text += $"\n\n  Cokes       x{cokeNum}     =     {coketotal.ToString("C")}";
-                
+
                 Refresh();
                 Thread.Sleep(500);
 
@@ -276,8 +276,8 @@ namespace cashRegister
             receiptDate.Text = "";
         }
 
-        
-        }
+
     }
+}
 
 
